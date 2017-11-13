@@ -6,13 +6,18 @@
 
 .portfolio-box {
 	position: relative;
-	width: 255px;
+	width: calc(25% - 38px);
 	margin: 30px 15px 0 15px;
 	overflow: hidden;
+	z-index: 99;
+}
+
+.portfolio-box img{
+	transition: all 0.3s;
+
 }
 
 .portfolio-box:hover img {
-	opacity: 0.6;
 	-o-transform: scale(1.25); -moz-transform: scale(1.25); -webkit-transform: scale(1.25); -ms-transform: scale(1.25); transform: scale(1.25);
 }
 
