@@ -134,16 +134,16 @@ jQuery(window).load(function() {
 		e.preventDefault();
 		if(!$(this).hasClass('active')) {
 	    	$('.portfolio-filters a').removeClass('active');
-	    	var clicked_filter = $(this).attr('class').replace('filter-', '');
+	    	var clicked_filter = $(this).attr('class').replace('filter-', '').replace('p5_nav_link', '').replace(' ', '');
 	    	$(this).addClass('active');
+
 	    	if(clicked_filter != 'all') {
 	    		$('.portfolio-box:not(.' + clicked_filter + ')').css('display', 'none');
 	    		$('.portfolio-box:not(.' + clicked_filter + ')').removeClass('portfolio-box');
 	    		$('.' + clicked_filter).addClass('portfolio-box');
 	    		$('.' + clicked_filter).css('display', 'block');
 	    		$('.portfolio-masonry').masonry();
-	    	}
-	    	else {
+	    	}else{
 	    		$('.portfolio-masonry > div').addClass('portfolio-box');
 	    		$('.portfolio-masonry > div').css('display', 'block');
 	    		$('.portfolio-masonry').masonry();
